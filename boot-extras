@@ -1,0 +1,55 @@
+#!/bin/bash
+# expects boot to be run first
+
+if [ "$(uname -s)" != "Darwin" ]; then
+  exit 0
+fi
+
+# zsh shell
+brew install zsh
+
+# a better ack/grep
+brew install the_silver_searcher
+
+# http://www.imagemagick.org/
+brew install imagemagick
+brew install phash
+brew install cmake
+brew install cimg
+brew install ffmpeg
+brew install lua
+brew install git-extras
+
+# Fuzzy finder
+brew install fzf
+
+# video player
+brew cask install vlc
+# c++ library
+brew install boost
+
+# event notification library
+brew install libevent
+
+# nodejs
+brew install node
+
+#http://www.economyofeffort.com/2014/08/11/beyond-ctrl-remap-make-that-caps-lock-key-useful/
+brew cask install karabiner
+#seil is not necessary if you set the system preferences for caps lock to control
+
+# VIPS imaging library 
+# https://github.com/jcupitt/ruby-vips/wiki/installation-on-various-platforms
+brew tap homebrew/science
+brew install vips
+
+# for editing gifs
+brew install giflib
+
+# http://docs.oracle.com/cd/E37670_01/E41138/html/ch11s07.html
+# https://github.com/brona/iproute2mac
+brew tap brona/iproute2mac
+brew install iproute2mac
+
+# make zsh the default shell
+chsh -s /usr/local/bin/zsh
